@@ -59,11 +59,13 @@
 	</header>
     <main>
 		 <header><h3 class="slogan">You drink our coffee, we make large bucks!</h3></header>
+		 <div id="coffeeTarget"></div>
+		 <!--
         <p>
     		 <img src="images/pumpkin-spice-latte.jpg" alt="Our Pumpkin Spice Latte tastes great on a Fall Day!" id="coffee" />
             <strong>Monday's Coffee Special:</strong> Monday's daily coffee special is <strong>Pumpkin Spice Latte</strong>, which makes us wish it was always Fall, as this is one of our top sellers!
 		</p>
-        
+		-->
      </main>
     <footer>
       <small>&copy; 2014-2015, All Rights Reserved ~
@@ -84,8 +86,20 @@
 		(paragraph must include the name of the highlighted weekday)
 
 		A unique color that supports the image and paragraph of content
-
 		*/
+
+		function coffeeTemplate(coffee){
+			let myReturn = "";
+
+			myReturn += ` <p>
+             <img src="images/${coffee.pic}" alt="Our Pumpkin Spice Latte tastes great on a Fall Day!" id="coffee" />
+            <strong>Monday's Coffee Special:</strong> Monday's daily coffee special is <strong>Pumpkin Spice Latte</strong>, which makes us wish it was always Fall, as this is one of our top sellers!
+        	</p>`; 
+
+			return myReturn;
+		}
+
+
 
 		let myDate = new Date();
 		let today = myDate.getDay();
@@ -143,6 +157,12 @@
 			break;
 		}
 
+		
+		document.getElementById("coffeeTarget").innerHTML = coffeeTemplate(coffee);
+
+		
+		
+		
 		console.log(today);
 
 		
