@@ -102,6 +102,7 @@
 
 		let myDate = new Date();
 		let today = myDate.getDay();
+		let coffee = "";
 
 		//Remove The Following When Not Testing//
 		//today=0;
@@ -113,6 +114,15 @@
 			
 			case 1:	
 				today ="Monday"
+
+				 coffee = {
+					coffee: "Bubble Tea",			
+					alt: "This is a pic of a Bubble Tea",
+					description: `I love Bubble Tea! It's bubbly!`,
+					pic: "bubble-tea.jpg",
+					color: "purple",
+					weekday: "Monday"
+		}
 			break;
 
 			case 2:	
@@ -121,6 +131,16 @@
 
 			case 3:
 				today = "Wednesday"
+
+				coffee = {
+					coffee: "Pumpkin Spice Latte",			
+					alt: "This is a pic of a Pumpkin Space Latte",
+					description: `Pumpkin Spice Lattes are our best seller`,
+					pic: "pumpkin-spice-latte.jpg",
+					color: "orange",
+					weekday: "Wednesday"
+		}
+
 			break;
 
 			case 4:	
@@ -138,14 +158,8 @@
 
 		console.log(today);
 
-		let coffee = {
-			coffee: "Pumpkin Spice Latte",			
-			alt: "This is a pic of a Pumpkin Space Latte",
-			description: `Pumpkin Spice Lattes are our best seller`,
-			pic: "pumpkin-spice-latte.jpg",
-			color: "orange",
-			weekday: "Wednesday"
-		}
+		
+		
 
 		console.log(coffee);
 
