@@ -60,6 +60,14 @@
     <main>
 		 <header><h3 class="slogan">You drink our coffee, we make large bucks!</h3></header>
 		 <div id="coffeeTarget"></div>
+		 <p> Click the links below to see coffee specials on other weekdays</p>
+		 <p><a href="?day=0">Sunday</a></p>
+		 <p><a href="?day=1">Monday</a></p>
+		 <p><a href="?day=2">Tuesday</a></p>
+		 <p><a href="?day=3">Wednesday</a></p>
+		 <p><a href="?day=4">Thursday</a></p>
+		 <p><a href="?day=5">Friday</a></p>
+		 <p><a href="?day=6">Saturday</a></p>
 		 <!--
         <p>
     		 <img src="images/pumpkin-spice-latte.jpg" alt="Our Pumpkin Spice Latte tastes great on a Fall Day!" id="coffee" />
@@ -92,8 +100,8 @@
 			let myReturn = "";
 
 			myReturn += ` <p>
-             <img src="images/${coffee.pic}" alt="Our Pumpkin Spice Latte tastes great on a Fall Day!" id="coffee" />
-            <strong>Monday's Coffee Special:</strong> Monday's daily coffee special is <strong>Pumpkin Spice Latte</strong>, which makes us wish it was always Fall, as this is one of our top sellers!
+             <img src="images/${coffee.pic}" alt="${coffee.alt}"  />
+            <strong>${coffee.weekday}'s Coffee Special:</strong> ${coffee.weekday}'s daily coffee special is <strong>${coffee.coffee}</strong>, ${coffee.description}
         	</p>`; 
 
 			return myReturn;
