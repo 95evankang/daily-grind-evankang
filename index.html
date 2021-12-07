@@ -100,18 +100,32 @@
 			let myReturn = "";
 
 			myReturn += ` <p>
-             <img src="images/${coffee.pic}" alt="${coffee.alt}"  />
+             <img src="images/${coffee.pic}" alt="${coffee.alt}" id="coffee" />
             <strong>${coffee.weekday}'s Coffee Special:</strong> ${coffee.weekday}'s daily coffee special is <strong>${coffee.coffee}</strong>, ${coffee.description}
         	</p>`; 
 
 			return myReturn;
 		}
 
+			//use location object to access querystring (address bar)
+			const queryString = window.location.search;
+				
+			//output to console    
+			console.log(queryString);
+				
+			//separate querystring parameters
+			const urlParams = new URLSearchParams(queryString);
 
 
 		let myDate = new Date();
 		let today = myDate.getDay();
 		let coffee = "";
+
+		if(urlParams.has("day")){
+			today = urlParams.get("day");
+			today = parseInt(today);
+		}
+
 
 		//Remove The Following When Not Testing//
 		//today=0;
@@ -179,7 +193,7 @@
 		document.getElementById("coffeeTarget").innerHTML = coffeeTemplate(coffee);
 
 		
-		
+		document.querySelector("html").style.backgroundColor = coffee.color;
 		
 		console.log(today);
 
