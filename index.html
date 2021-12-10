@@ -85,7 +85,7 @@
 	<script>
 		/*
 
-		Use HTML/CSS & JavaScript to create a single page that rotates unique colors and content for each weekday (Sunday to Saturday) 
+		<p>Use HTML/CSS & JavaScript to create a single page that rotates unique colors and content for each weekday (Sunday to Saturday) 
 		into the page.  The content must include:
 
 		One unique image, with appropriate and matching content in the alt tag.
@@ -93,7 +93,7 @@
 		A paragraph or two of content that describes the daily item 
 		(paragraph must include the name of the highlighted weekday)
 
-		A unique color that supports the image and paragraph of content
+		A unique color that supports the image and paragraph of content</p>
 		*/
 
 		function coffeeTemplate(coffee){
@@ -128,11 +128,20 @@
 
 
 		//Remove The Following When Not Testing//
-		//today=0;
+		//today=6;
 
 		switch(today){
 			case 0:	
 				today ="Sunday"
+
+				coffee = {
+					coffee: "Cold Brew",			
+					alt: "This is a pic of a Cold Brew",
+					description: `I love Cold Brew`,
+					pic: "cold-brew.jpg",
+					color: "burgundy",
+					weekday: "Sunday"
+			}			
 			break;
 			
 			case 1:	
@@ -178,16 +187,48 @@
 
 			case 4:	
 				today ="Thursday"
+
+				coffee = {
+					coffee: "Drip Coffee",			
+					alt: "This is a pic of Drip Coffee",
+					description: `I love Drip Coffee`,
+					pic: "drip.jpg",
+					color: "brown",
+					weekday: "Thursday"
+			}			
+
 			break;
 
 			case 5:	
 				today ="Friday"
+
+				coffee = {
+					coffee: "Frappaccino",			
+					alt: "This is a pic of a Frappaccino",
+					description: `I love Frappaccino`,
+					pic: "frappaccino.jpg",
+					color: "#5542",
+					weekday: "Friday"
+			}			
+
 			break;
 
 			case 6:	
 				today ="Saturday"
+
+				coffee = {
+					coffee: "Mocha",			
+					alt: "This is a pic of a Mocha",
+					description: `I love Mochas`,
+					pic: "mocha.jpg",
+					color: "#951",
+					weekday: "Saturday"
+			}			
+
 			break;
 		}
+
+		
 
 		
 		document.getElementById("coffeeTarget").innerHTML = coffeeTemplate(coffee);
@@ -206,6 +247,14 @@
 
 
 	</script>
-	
+	<p>Use HTML/CSS & JavaScript to create a single page that rotates unique colors and content for each weekday (Sunday to Saturday) 
+		into the page.  The content must include:
+
+		One unique image, with appropriate and matching content in the alt tag.
+
+		A paragraph or two of content that describes the daily item 
+		(paragraph must include the name of the highlighted weekday)
+
+		A unique color that supports the image and paragraph of content</p>
 </body>
 </html>
